@@ -1,0 +1,32 @@
+url: https://dataniel.github.io/taxmill
+
+template:
+  bootstrap: 5
+
+navbar:
+  structure:
+    left: [intro, reference, articles]
+    right: [github]
+  components:
+    github:
+      icon: fab fa-github
+      href: https://github.com/dataniel/taxmill
+
+home:
+  strip_header: true
+
+reference:
+  - title: Start here
+    contents:
+      - taxmill-package
+
+  - title: The mill
+    contents:
+      - accounts_pdf_to_txt
+      - accounts_txt_to_xlsx
+
+articles:
+  - title: Get started
+    navbar: ~
+    contents:
+      - taxmill

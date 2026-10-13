@@ -1,0 +1,36 @@
+Package: taxmill
+Title: Turn PDF Financial Statements into a Tidy Dataset
+Version: 0.1.0
+Authors@R: person("Daniel", "Madsen", email = "danielmadsen@live.dk",
+    role = c("aut", "cre"))
+Description: A mill for digital PDF financial statements: extract the text,
+    shape the statement into the simple line format the parser expects, and
+    export every file at once to Excel in tidy form. Tax accounts and
+    ordinary annual accounts are laid out as tables, and that structure is
+    what makes the route possible at all. Everything runs locally and
+    nothing is uploaded, so the documents -- which are usually confidential
+    -- never leave the machine. The shaping step in the middle is manual and
+    slow, and the package is built to make the rest of it fast and to catch
+    every mistake before anything is written.
+License: MIT + file LICENSE
+URL: https://dataniel.github.io/taxmill, https://github.com/dataniel/taxmill
+BugReports: https://github.com/dataniel/taxmill/issues
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports:
+    cli,
+    dplyr,
+    readr,
+    tibble
+Suggests:
+    pdftools,
+    writexl,
+    testthat (>= 3.0.0),
+    withr,
+    knitr,
+    rmarkdown,
+    pkgdown
+Config/Needs/website: pkgdown
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0
